@@ -238,6 +238,10 @@ img
     border: 0;
 }
 
+.ErrorMessage
+{
+    color: Red;
+}
 
 
 
