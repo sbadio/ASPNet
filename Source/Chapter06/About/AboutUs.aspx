@@ -4,6 +4,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" Runat="Server">
     <br />
+    <p>My name is Serge and I created this site to gain more hands on experience using VB 2015</p>
+    <asp:Button ID="Button1" runat="server" Text="Button" />
+    <Wrox:Banner ID="Banner2" runat="server" DisplayDirection="Horizontal" />
     <br />
     <br />
     <br />

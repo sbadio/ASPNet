@@ -1,5 +1,9 @@
 ﻿<%@ Master Language="VB" CodeFile="Frontend.master.vb" Inherits="MasterPages_Frontend" %>
 
+<%--No longer needed now that this user control has beend added to the web.config file so that 
+this uc can be applied site wide--%>
+<%--<%@ Register src="~/Controls/Banner.ascx" tagname="Banner" tagprefix="uc1" %>--%>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -36,6 +40,10 @@
                     <asp:ListItem>Monochrome</asp:ListItem>
                     <asp:ListItem>DarkGrey</asp:ListItem>
                 </asp:DropDownList>
+                <br />
+                <br />
+                <br />
+                <Wrox:Banner ID="Banner1" runat="server" DisplayDirection="Vertical" />
             </aside>
             <footer>Footer Goes Here</footer>
         </div>
