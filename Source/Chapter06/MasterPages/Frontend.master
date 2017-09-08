@@ -25,11 +25,11 @@ this uc can be applied site wide--%>
                         <asp:TreeNodeStyle CssClass="FirstLevelMenuItems" />
                     </LevelStyles>
                 </asp:TreeView>
-
-
             </nav>
             <section id="MainContent">
-                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath><br /><br />
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+                <br />
+                <br />
                 <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
                 </asp:ContentPlaceHolder>
             </section>
