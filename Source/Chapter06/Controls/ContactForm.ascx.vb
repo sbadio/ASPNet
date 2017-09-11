@@ -15,28 +15,30 @@ Partial Class Controls_ContactForm
 
     Protected Sub SendButton_Click(sender As Object, e As EventArgs) Handles SendButton.Click
         If Page.IsValid Then
-            Dim fileName As String = Server.MapPath("~/App_Data/ContactForm.txt")
-            Dim mailBody As String = File.ReadAllText(fileName)
+            'This goes setsup the SMTP to send an email. It has been blocked out since I don't plan on testing a real user email and account password.  
+            'Dim fileName As String = Server.MapPath("~/App_Data/ContactForm.txt")
+            'Dim mailBody As String = File.ReadAllText(fileName)
 
-            mailBody = mailBody.Replace("##Name##", Name.Text)
-            mailBody = mailBody.Replace("##Email##", EmailAddress.Text)
-            mailBody = mailBody.Replace("##HomePhone##", PhoneHome.Text)
-            mailBody = mailBody.Replace("##BusinessPhone##", PhoneBusiness.Text)
-            mailBody = mailBody.Replace("##Comments##", Comments.Text)
+            'mailBody = mailBody.Replace("##Name##", Name.Text)
+            'mailBody = mailBody.Replace("##Email##", EmailAddress.Text)
+            'mailBody = mailBody.Replace("##HomePhone##", PhoneHome.Text)
+            'mailBody = mailBody.Replace("##BusinessPhone##", PhoneBusiness.Text)
+            'mailBody = mailBody.Replace("##Comments##", Comments.Text)
 
-            Dim myMessage As MailMessage = New MailMessage()
-            myMessage.Subject = "Response from web site"
-            myMessage.Body = mailBody
+            'Dim myMessage As MailMessage = New MailMessage()
+            'myMessage.Subject = "Response from web site"
+            'myMessage.Body = mailBody
 
-            myMessage.From = New MailAddress("you@example.com", "Sender Name")
-            myMessage.To.Add(New MailAddress("you@example.com", "Receiver Name"))
-            myMessage.ReplyToList.Add(New MailAddress(EmailAddress.Text))
+            'myMessage.From = New MailAddress("you@example.com", "Sender Name")
+            'myMessage.To.Add(New MailAddress("you@example.com", "Receiver Name"))
+            'myMessage.ReplyToList.Add(New MailAddress(EmailAddress.Text))
 
-            Dim mySmtpClient As SmtpClient = New SmtpClient
-            mySmtpClient.Send(myMessage)
+            'Dim mySmtpClient As SmtpClient = New SmtpClient
+            'mySmtpClient.Send(myMessage)
 
             Message.Visible = True
             FormTable.Visible = False
+            System.Threading.Thread.Sleep(5000)
         End If
     End Sub
 End Class
