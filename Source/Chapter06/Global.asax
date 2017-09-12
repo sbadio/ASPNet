@@ -1,10 +1,12 @@
 ﻿<%@ Application Language="VB" %>
 
-<script runat="server">
+<script RunAt="server">
 
     Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
         ' Code that runs on application startup
         RouteConfig.RegisterRoutes(System.Web.Routing.RouteTable.Routes)
+        ScriptManager.ScriptResourceMapping.AddDefinition("jquery", New ScriptResourceDefinition With
+                                                          {.Path = "~/Scripts/jquery-3.1.1.js"})
     End Sub
 
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
