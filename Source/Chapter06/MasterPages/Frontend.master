@@ -14,7 +14,11 @@ this uc can be applied site wide--%>
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="~/Scripts/jquery-3.1.1.min.js" />
+            </Scripts>
+        </asp:ScriptManager>
         <div id="PageWrapper">
             <header><a href="/"></a></header>
             <nav>
@@ -49,5 +53,7 @@ this uc can be applied site wide--%>
             <footer>Footer Goes Here</footer>
         </div>
     </form>
+    <asp:ContentPlaceHolder ID="cpClientScript" runat="server">
+    </asp:ContentPlaceHolder>
 </body>
 </html>
